@@ -31,3 +31,22 @@
 // }
 
 // console.log(calculateTotalFood(200, 20));
+
+const groceries = ['🍌', '🍎', '🍊', '🍐'];
+console.log(groceries);
+
+//grab a certain index from an array
+console.log(groceries[2]);
+
+//array methods
+//Array.push - push a new index onto the end of an array
+groceries.push('🍪', 'blueberry');
+
+//Array.Length - find the length of the array
+console.log(groceries.length)
+
+//Array.indexOf() - gives the index of a certain item in an array
+console.log(groceries.indexOf('🍐'));
+
+//Array.slice() - get a certain portion of an array
+console.log(groceries.slice(3, 6));
