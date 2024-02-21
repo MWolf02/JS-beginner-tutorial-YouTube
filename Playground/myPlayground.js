@@ -88,18 +88,43 @@
 // 'name' and 'shirt' arguments are used to populate the introduction.
 // The function returns the introduction string.
 
-const introducer = (name, shirt) => {
-    const person = {
-      name,
-      shirt,
-      assets: 100000,
-      liabilities: 50000,
-      netWorth: function(){
-        return this.assets - this.liabilities;
-      }
-    }
-    const intro = `Hi, my name is ${person.name} and my shirt is ${person.shirt}. My net worth is $${person.netWorth()} USD`;
-  
-    return intro;
+// const introducer = (name, shirt) => {
+//   const person = {
+//     name,
+//     shirt,
+//     assets: 100000,
+//     liabilities: 50000,
+//     netWorth: function(){
+//       return this.assets - this.liabilities;
+//     }
+//   }
+//   const intro = `Hi, my name is ${person.name} and my shirt is ${person.shirt}. My net worth is $${person.netWorth()} USD`;
+
+//   return intro;
+// }
+// console.log(introducer('Martin', 'black'));
+
+
+// Loops - Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+const fruits = ['🍌', '🍎', '🍊', '🍐'];
+
+// bad practice - loop that runs through the array of "fruits" and console logs every index until the end of the array
+for(let i = 0; i < fruits.length; i++){
+  console.log(fruits[i]);
+}
+
+// good practice - loop that runs through the array of "fruits" and console logs every index until the end of the array
+for(const fruit of fruits){
+  console.log(fruit)
+}
+
+// this function called double takes in numbers as a parameter, and returns an array of doubled numbers. It does that by using a for loop to iterate through the array and multiply each element by 2.
+const double = (numbers) =>{
+  let result = [];
+  for(const number of numbers){
+    result.push(number ** 2);
   }
-  console.log(introducer('Martin', 'black'));
+  return result;
+}
+console.log(double([1, 2, 3, 4, 5, 6, 7, 8, 9]));
